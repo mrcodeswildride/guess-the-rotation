@@ -1,14 +1,14 @@
 let image = document.getElementById(`image`)
 let guess = document.getElementById(`guess`)
-let guessButton = document.getElementById(`guessButton`)
+let submitButton = document.getElementById(`submitButton`)
 let resultParagraph = document.getElementById(`resultParagraph`)
 
 let randomNumber = Math.floor(Math.random() * 360)
 image.style.transform = `rotate(${randomNumber}deg)`
 
-guessButton.addEventListener(`click`, showResult)
+submitButton.addEventListener(`click`, submit)
 
-function showResult() {
+function submit() {
   let guessValue = guess.value.trim()
 
   if (guessValue == `` || isNaN(guessValue)) {
