@@ -1,29 +1,23 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Guess the Rotation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8" />
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
 
-<head>
-	<title>Guess the Rotation</title>
-	<meta name="viewport" content="width=device-width, initial-scale=0.5">
-	<link href="style.css" rel="stylesheet">
-	<script src="script.js" defer>
+  <body>
+    <h1>Guess the Rotation</h1>
 
-	</script>
-</head>
+    <img src="compass.png" width="400" id="image" />
 
-<body>
-	<h1>Guess the Rotation</h1>
+    <div id="sidePanel">
+      <p>How many degrees is the image rotated?</p>
 
-	<img src="compass.png" width="400" id="image">
-
-	<div id="sidePanel">
-		<p>
-      How many degrees is the image rotated?
-    </p>
-
-    <input type="number" min="0" max="359" placeholder="0 - 359" id="guess">
-    <button id="submitButton">Submit</button>
-    <p id="resultParagraph"></p>
-  </div>
-</body>
-
+      <input type="number" min="0" max="359" placeholder="0 - 359" id="guess" />
+      <button id="submitButton">Submit</button>
+      <p id="resultParagraph"></p>
+    </div>
+  </body>
 </html>

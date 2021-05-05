@@ -8,13 +8,14 @@ image.style.transform = `rotate(${randomNumber}deg)`
 
 submitButton.addEventListener(`click`, submit)
 
+guess.focus()
+
 function submit() {
   let guessValue = guess.value.trim()
 
-  if (guessValue == `` || isNaN(guessValue)) {
-    resultParagraph.innerHTML = `Please type a number.`
-  }
-  else {
+  if (guessValue == ``) {
+    resultParagraph.innerHTML = `Type a number.`
+  } else {
     let diff = Math.abs(randomNumber - guessValue)
     resultParagraph.innerHTML = `Rotation is ${randomNumber}. You were off by ${diff}.`
   }
